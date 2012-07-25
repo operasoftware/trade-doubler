@@ -1,0 +1,176 @@
+html{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: OpenSansRegular, Arial, sans-serif;
+    font-weight: normal;   
+    overflow: hidden;
+    font-size: 14px;    
+    margin: 0;
+    padding: 0;
+    color: #948670;
+    line-height: 22px;
+    background-color: #fff;   
+}
+.clearfix:after{
+    display: block; visibility: hidden; clear: both; 
+    height: 0; 
+    content: "."; 
+}
+.aural{
+    position: absolute;
+    top: -9999px;
+    font-size: 0;    
+}
+body#sd{
+    display: table;
+    padding: 1.5% 0 0 1.5%;
+    height: 100%;
+    width: 97.5%;
+}
+#sd #content{
+    padding-top: 20px;
+    display: table-cell;
+    border-radius: 5px;
+    box-shadow: -1px -1px #cac3b9;
+    background: #ebe7e0 url(../images/lines_bg.png) repeat 50% 0;
+}
+#sd header{
+    margin-top: 16px;
+    display: none;
+    background: transparent url(../images/scissors.png) no-repeat 100% 5px;
+}
+#sd p{
+    display: none;
+    margin: 16px 0 0 0;
+    padding: 0;
+    height: 66px;
+    overflow: hidden;
+}
+#sd h2{
+    font-family: AbrilFatfaceRegular;
+    font-size: 16px;
+    text-shadow: -1px -1px #f6f3ee;
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+#sd h1{
+    font-family: AbrilFatfaceRegular;
+    font-size: 20px;
+    color: #cf1f24;
+    text-shadow: -1px -1px #f6f3ee;
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+    overflow: hidden;
+    height: 25px;
+}
+#sd h1 strong{
+    position: relative;
+    font-weight: normal;
+    display: inline-block;
+}
+#sd h1 span{
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 100%;
+    width: 500px;
+    height: 100%;
+    margin-left: 10px;
+    background: transparent url(../images/scissors_hr.png) repeat-x 0 60%;
+}
+#sd .wrap{
+    margin: 0 auto;
+}
+#sd .logo{    
+    height: 80px;
+    padding: 23px 0;
+    text-align: center;
+    background: transparent url(../images/coupon_bg.png) repeat-x 0 0;
+}
+#sd .logoLeft{
+    display: none;
+    padding-left: 42px;
+    background: transparent url(../images/coupon_ends.png) no-repeat 0 0;
+}
+#sd .logoRight{
+    padding-right: 42px;
+    background: transparent url(../images/coupon_ends.png) no-repeat 100% 100%;
+}
+#sd .logo img{
+    display: inline-block;
+    height: 100%;
+    max-width: 100%;
+}
+
+@media(min-width:461px){
+    #sd .wrap{width: 390px;}
+    #sd header,#sd p,#sd .logoLeft{
+        display: block;
+    }
+}
+@media (max-width: 460px) and (min-width: 340px){
+    #sd .wrap{
+        width: 300px;
+        margin: -90px 0 0 -150px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+    }
+    #sd #content{
+        position: relative;
+        padding-top: 0;
+    }
+    #sd header,#sd .logoLeft{
+        display: block;
+    }
+}
+@media (max-width: 340px){
+    body#sd{
+        padding: 0;
+        width: 100%;
+        display: block;
+    }
+    #sd #content{
+        padding: 0;
+        height: 100%;
+        display: block;
+    }
+    #sd .wrap{
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        background-color: transparent;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+    }
+}
+@media (max-width: 340px) and (min-width: 310px){
+    #sd .wrap{
+        background-image: url(../images/ck_logo_280.png);
+        background-size: 280px 112px;
+    }    
+}
+@media (max-width: 309px) and (min-width: 220px){
+    #sd .wrap{
+        background-image: url(../images/ck_logo_200.png);
+        background-size: 200px 80px;
+    }    
+}
+@media (max-width: 219px) and (min-width: 130px){
+    #sd .wrap{
+        background-image: url(../images/ck_logo_120.png);
+        background-size: 120px 48px;
+    }    
+}
+@media (max-width: 129px){
+    #sd .wrap{
+        background-image: url(../images/ck_logo_62.png);
+        background-size: 60px 24px;
+    }    
+}
