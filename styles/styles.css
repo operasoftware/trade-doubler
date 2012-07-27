@@ -26,39 +26,78 @@ body{
     font-size: 0;    
 }
 body#sd{
+    width: 100%;
+    height: 100%;
+}
+#logo{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-indent: -9999px;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+#bg{
     display: table;
     padding: 1.5% 0 0 1.5%;
     height: 100%;
     width: 97.5%;
 }
-#sd #content{
-    padding-top: 20px;
+#bgWrap{
+    position: relative;
     display: table-cell;
     border-radius: 5px;
+    height: 100%;
     box-shadow: -1px -1px #cac3b9;
+    overflow: hidden;
     background: #ebe7e0 url(../images/lines_bg.png) repeat 50% 0;
 }
-#sd header{
+#list{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -130px 0 0 -195px;
+    width: 390px;
+    background-color: red;
+}
+#list section{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    -o-transition: left 0.4s ease-in-out 0; 
+}
+#list section#current{left: 0;}
+#list section#next{left: 150%;}
+
+#list section header{
     margin-top: 16px;
-    display: none;
+    padding-top: 22px;
+    position: relative;
     background: transparent url(../images/scissors.png) no-repeat 100% 5px;
 }
-#sd p{
-    display: none;
-    margin: 16px 0 0 0;
+#list section p{
+    margin: 14px 0 0 0;
     padding: 0;
     height: 66px;
     overflow: hidden;
 }
-#sd h2{
+#list section h2{
     font-family: AbrilFatfaceRegular;
     font-size: 16px;
     text-shadow: -1px -1px #f6f3ee;
     margin: 0;
     padding: 0;
     font-weight: normal;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
-#sd h1{
+#list section h1{
     font-family: AbrilFatfaceRegular;
     font-size: 20px;
     color: #cf1f24;
@@ -69,12 +108,12 @@ body#sd{
     overflow: hidden;
     height: 25px;
 }
-#sd h1 strong{
+#list section h1 strong{
     position: relative;
     font-weight: normal;
     display: inline-block;
 }
-#sd h1 span{
+#list section h1 .sdLine{
     position: absolute;
     display: block;
     top: 0;
@@ -84,17 +123,14 @@ body#sd{
     margin-left: 10px;
     background: transparent url(../images/scissors_hr.png) repeat-x 0 60%;
 }
-#sd .wrap{
-    margin: 0 auto;
-}
-#sd .logo{    
+
+#list section .logo{    
     height: 80px;
     padding: 23px 0;
     text-align: center;
     background: transparent url(../images/coupon_bg.png) repeat-x 0 0;
 }
-#sd .logoLeft{
-    display: none;
+#list section .logoLeft{
     padding-left: 42px;
     background: transparent url(../images/coupon_ends.png) no-repeat 0 0;
 }
@@ -102,74 +138,62 @@ body#sd{
     padding-right: 42px;
     background: transparent url(../images/coupon_ends.png) no-repeat 100% 100%;
 }
-#sd .logo img{
+#list section .logo img{
     display: inline-block;
     height: 100%;
     max-width: 100%;
 }
-
-@media(min-width:461px){
-    #sd .wrap{width: 390px;}
-    #sd header,#sd p,#sd .logoLeft{
-        display: block;
+@media (min-width: 460px){
+    .loading #list section#current{
+        height: 260px;
+        background: transparent url(../images/ck_logo_280.png) no-repeat 50% 50%;
+        background-size: 280px 112px;
+    }
+    .loading #list section#current header,
+    .loading #list section#current p,
+    .loading #list section#current .logoLeft{
+        visibility: hidden;
     }
 }
 @media (max-width: 460px) and (min-width: 340px){
-    #sd .wrap{
+    #list{
         width: 300px;
         margin: -90px 0 0 -150px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
     }
-    #sd #content{
-        position: relative;
-        padding-top: 0;
-    }
-    #sd header,#sd .logoLeft{
-        display: block;
+    #list section p{
+        display: none;
     }
 }
 @media (max-width: 340px){
+    body#sd #bg{display: none;}
     body#sd{
-        padding: 0;
-        width: 100%;
         display: block;
+        background: #ebe7e0 url(../images/lines_bg.png) repeat 50% 0;
     }
-    #sd #content{
-        padding: 0;
-        height: 100%;
+    #logo{
         display: block;
-    }
-    #sd .wrap{
-        height: 100%;
-        width: 100%;
-        margin: 0;
-        background-color: transparent;
-        background-repeat: no-repeat;
-        background-position: 50% 50%;
     }
 }
 @media (max-width: 340px) and (min-width: 310px){
-    #sd .wrap{
+    #logo{
         background-image: url(../images/ck_logo_280.png);
         background-size: 280px 112px;
     }    
 }
 @media (max-width: 309px) and (min-width: 220px){
-    #sd .wrap{
+    #logo{
         background-image: url(../images/ck_logo_200.png);
         background-size: 200px 80px;
     }    
 }
 @media (max-width: 219px) and (min-width: 130px){
-    #sd .wrap{
+    #logo{
         background-image: url(../images/ck_logo_120.png);
         background-size: 120px 48px;
     }    
 }
 @media (max-width: 129px){
-    #sd .wrap{
+    #logo{
         background-image: url(../images/ck_logo_62.png);
         background-size: 60px 24px;
     }    

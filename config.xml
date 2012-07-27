@@ -8,7 +8,7 @@
    <preference name="time" value="7"/>
    <preference name="categories" value=""/>
    <feature name="opera:speeddial" required="false">
-      <param name="url" value="http://centrumkuponow.com/"/>
+      <param name="url" value="www.centrumzakupow.pl"/>
    </feature>
    <access origin="*"/>
 </widget>
