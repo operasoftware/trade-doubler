@@ -1,0 +1,75 @@
+html{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: OpenSansRegular, Arial, sans-serif;
+    font-weight: normal;   
+    overflow: hidden;
+    font-size: 14px;    
+    margin: 0;
+    padding: 0;
+    color: #4a4a4a;
+    line-height: 22px;
+    background-color: #e3e3e3;
+}
+.clearfix:after{
+    display: block; visibility: hidden; clear: both; 
+    height: 0; 
+    content: "."; 
+}
+.aural{
+    position: absolute;
+    top: -9999px;
+    font-size: 0;    
+}
+
+.row{
+    margin: 0 0 15px 0;
+    border-radius: 5px;
+    box-shadow: 1px 3px 3px #cac3b9;
+    background-color: #fff;
+    padding: 24px 12px;
+}
+.form{
+    margin: 0 auto;
+    padding: 15px;
+    width: 440px;
+}
+@media (max-height: 400px){
+    .scroll{
+        height: 140px;
+        overflow-y: scroll;
+    }
+}
+h1{
+    font-size: 26px;
+    margin: 0 0 24px 0;
+    padding: 0;
+}
+label.cat{
+    float: left;
+    width: 140px;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: bold;
+}
+.items{
+    float: right;
+    width: 260px;
+}
+.itemRow{
+    margin-bottom: 4px;
+}
+.itemRow input{
+    float: left;
+    width: 15px;
+    height: 15px;
+}
+.itemRow label{
+    margin-left: 5px;
+    float: left;
+    width: 215px;
+}

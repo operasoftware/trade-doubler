@@ -1,0 +1,420 @@
+html{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: OpenSansRegular, Arial, sans-serif;
+    font-weight: normal;
+    font-size: 14px;    
+    margin: 0;
+    padding: 0;
+    color: #948670;
+    line-height: 22px;
+    background-color: #fff;
+    height: 100%;
+}
+.clearfix:after{
+    display: block; visibility: hidden; clear: both; 
+    height: 0; 
+    content: ".";
+}
+.aural{
+    position: absolute;
+    top: -9999px;
+    font-size: 0;    
+}
+a,a:focus,a:active{
+    color: #948670;
+    text-decoration: underline;
+}
+a:hover{
+    color: #948670;
+    text-decoration: none;
+}
+#wrapper{
+    min-height: 100%;
+    margin-bottom: -228px;
+}
+#push{
+    height: 228px;
+}
+#footer{
+    padding-top: 50px;
+    height: 178px;
+    background: transparent url(../images/footer_bg.jpg) repeat-x 50% 0;
+}
+#footer .col{
+    float: left;
+    padding-left: 62px;
+    background: transparent url(../images/opera_logo.png) no-repeat 0 50%;
+}
+#footer .colR{
+    float: right;
+}
+.wrap{
+    margin: 0 auto;
+    width: 960px;
+}
+#footer a{
+    font-weight: normal;
+    font-family: OpenSansBold;
+}
+#footer p{
+    margin: 0;
+    padding: 0;
+    line-height: 20px;
+}
+#header{
+    background: transparent url(../images/header_bg.jpg) repeat-x 50% 100%;
+    padding: 50px 0;
+    width: 100%;
+    overflow: hidden;
+}
+#header #logo{
+    position: relative;
+    width: 318px;
+    height: 127px;
+    margin: 0 auto 40px auto;
+}
+#header #logo::before{
+    position: absolute;
+    top: 36px;
+    right: 328px;
+    width: 3280px;
+    height: 32px;
+    background-color: transparent;
+    background-image: url(../images/header_hr_left.png), url(../images/scissors_header.png);
+    background-repeat: repeat-x, no-repeat;
+    background-position: 100% 100%, 2965px 0;
+    content: '';
+}
+#header #logo::after{
+    position: absolute;
+    top: 36px;
+    left: 328px;
+    width: 3280px;
+    height: 32px;
+    background-color: transparent;
+    background-image: url(../images/header_hr_right.png), url(../images/scissors_header.png);
+    background-repeat: repeat-x, no-repeat;
+    background-position: 0 100%, 280px 0;
+    content: '.';
+    text-indent: -9999px;
+}
+#top{
+    width: 730px;
+}
+#top dl{
+    margin: 0 auto;
+    width: 720px;
+}
+#top dl dt{
+    float: left;
+    height: 43px;
+    line-height: 43px;
+    font-weight: normal;
+    font-family: AbrilFatfaceRegular;
+    font-size: 18px;
+}
+#top dl dd{
+    position: relative;
+    overflow: hidden;
+    float: right;
+    width: 455px;
+    height: 43px;
+    line-height: 46px;
+    margin-left: 0;
+    padding: 0 56px 0 16px;
+    cursor: pointer;
+    color: #cf1f22;
+    font-family: OpenSansBold;
+    font-weight: normal;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    background: transparent url(../images/cat_input.png) no-repeat 0 0;
+}
+#top dl dd::after{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 43px;
+    cursor: pointer;
+    content: '';
+    text-indent: -9999px;
+    background: transparent url(../images/cat_input.png) no-repeat 0 -129px;
+}
+#top dl dd:hover::after{
+    background-position: 0 -172px;
+}
+#top.open dl dd::after{
+    background-position: 0 -43px;
+}
+#top.open dl dd:hover::after{
+    background-position: 0 -86px;
+}
+#summary{
+    display: none;
+    padding-top: 30px;
+}
+#top.open #summary{
+    display: block;
+}
+#summary .col{
+    float: left;
+    width: 220px;
+}
+#summary .colR{
+    width: 290px;
+}
+#summary span{
+    display: block;
+    line-height: 18px;
+    margin: 15px 5px 0 5px;
+    cursor: pointer;
+    
+}
+#summary span:hover{
+    text-decoration: underline;
+}
+#summary span.selected{
+    padding-left: 22px;
+    font-family: OpenSansBold;
+    font-weight: normal;
+    text-decoration: underline;
+    background: transparent url(../images/cat_star.png) no-repeat 0 50%;
+}
+#content{
+    min-height: 300px;
+    padding-bottom: 60px;
+}
+.pagination{
+    border-top: 2px solid #ebe7e1;
+    margin: 4px 0 0 0;
+    padding: 30px 0 0 0;
+    text-align: center;
+}
+.single .pagination{
+    display: none;
+}
+.pagination span{
+    display: inline-block;
+    width: 43px;
+    height: 43px;
+    margin: 0 2px;
+    line-height: 43px;
+    font-family: OpenSansBold;
+    cursor: pointer;
+    background: transparent url(../images/pagination_bg.png) no-repeat 0 100%;
+}
+.pagination span:hover{
+    background-position: 0 0;
+    color: #fff;
+}
+.pagination span.current,.pagination span.current:hover{
+    background-position: 0 0;
+    color: #fff;
+    cursor: default;
+}
+.pagination span.sep,.pagination span.sep:hover{
+    background-image: none;
+    color: #948670;
+    margin: 0;
+    width: 30px;
+}
+.pagination span.prev{
+    position: relative;
+    margin: 0 34px 0 0;
+    text-indent: -9999px;
+    background-image: url(../images/pagination_arrows.png);
+    background-position: 0 0;
+}
+.pagination span.prev:hover{
+    background-position: 0 100%;
+}
+.pagination span.prev::after{
+    position: absolute;
+    width: 1px;
+    height: 29px;
+    top: 7px;
+    left: 60px;
+    background-color: #ebe7e1; 
+    content: '';
+}
+.pagination span.next{
+    position: relative;
+    margin: 0 0 0 34px;
+    text-indent: -9999px;
+    background-image: url(../images/pagination_arrows.png);
+    background-position: 100% 0;
+}
+.pagination span.next:hover{
+    background-position: 100% 100%;
+}
+.pagination span.next::after{
+    position: absolute;
+    width: 1px;
+    height: 29px;
+    top: 7px;
+    right: 62px;
+    background-color: #ebe7e1; 
+    content: '';
+}
+#content section > header{
+    overflow: hidden;
+    margin-top: 28px;
+    padding-top: 14px;
+    background: transparent url(../images/scissors_content.png) no-repeat 100% 6px;
+}
+#content section#promoted > header{
+    margin-top: 38px;
+}
+#content section > header h1{
+    font-family: AbrilFatfaceRegular;
+    font-weight: normal;
+    display: inline-block;    
+    position: relative;
+    margin: 0;
+    padding: 0;
+    line-height: 38px;
+    font-size: 28px;
+}
+#content section#promoted > header h1{
+    color: #cf1f22;
+}
+#content section > header h1::after{
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    width: 960px;
+    margin: -2px 0 0 8px;
+    height: 9px;
+    content: '';
+    background: transparent url(../images/hr_content.png) repeat-x 100% 0;
+}
+#content article{
+    position: relative;
+    padding: 28px 0;
+    background: transparent url(../images/hr.jpg) repeat-x -4px 100%;
+}
+#content article::before{
+    position: absolute;
+    display: block;
+    bottom: 3px;
+    right: 0;
+    width: 35px;
+    height: 22px;
+    content: '';
+    background: transparent url(../images/scissors_content.png) no-repeat 0 0;
+}
+#content #promoted article::before,#content section.single article.last::before{
+    display: none;
+}
+#content #promoted article.last,#content section.single article.last{
+    padding-bottom: 0;
+    background-image: none;
+}
+#content article header{
+    float: left;
+    width: 480px;
+    padding-top: 4px;
+}
+#content article h2{
+    margin: 0;
+    padding: 0;
+    line-height: 22px;
+    font-size: 18px;
+    font-weight: normal;
+    font-family: AbrilFatfaceRegular;
+}
+#content article h1{
+    margin: 0;
+    padding: 0;
+    font-size: 24px;
+    line-height: 26px;
+    color: #CF1F22;
+    font-weight: normal;
+    font-family: AbrilFatfaceRegular;
+}
+#content article p{
+    margin: 12px 0 0 0;
+}
+#content article footer{
+    float: right;
+    border-radius: 5px;
+    padding: 5px 5px 8px 5px;
+    border: 1px solid #d6cebf;
+    background: #fff url(../images/itembg.jpg) repeat-x 0 0;
+}
+#content article footer dl{
+    margin: 8px 0 0 0;
+    padding: 0;
+    font-size: 13px;
+    text-align: center;
+}
+#content article footer dl dt{
+    display: inline;
+    padding: 0 6px 0 0;
+    margin: 0;
+}
+#content article footer dl dd{
+    display: inline;
+    padding: 0;
+    margin: 0;
+    font-family: OpenSansBold;
+}
+#content article footer a{
+    display: block;
+    height: 47px;
+    width: 197px;
+    outline: none;
+    text-indent: -9999px;
+    background: transparent url(../images/buttons.png) no-repeat 0 0;
+}
+#content article footer a:hover{
+    background-position: 0 -47px;
+}
+#content article.coupon footer a{
+    width: 178px;
+    background-position: 0 -94px;
+}
+#content article.coupon footer a:hover{
+    background-position: 0 -141px;
+}
+#content article .brand{
+    float: left;
+    width: 198px;
+    height: 100px;
+    padding: 14px 0;
+    margin-right: 40px;
+    text-align: center;
+    overflow: hidden;
+    background: transparent url(../images/par_logo_bg.png) no-repeat 0 0;
+}
+#content article .brand img{
+    display: inline-block;
+    max-width: 140px;
+    max-height: 100px;
+}
+.loadingTxt,.emptyTxt{
+    display: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    line-height: 150px;
+    min-height: 150px;
+}
+.loading .loadingTxt{
+    display: block;
+}
+.loading article,.loading .pagination,.single .pagination{
+    display: none;
+}
+#content section#promoted.empty,#content section#filtered.empty .pagination,
+#content section#filtered.empty article,#content section#filtered.empty .loadingTxt{
+    display: none;
+}
+#content section#filtered.empty .emptyTxt{
+    display: block;
+}

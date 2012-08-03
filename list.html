@@ -29,9 +29,99 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <head>
         <title>Centrum Kuponów</title>
         <meta http-equiv="content-type" content="text/html; charset=utf-8"> 
-        <link href="styles/all.css" type="text/css" media="all" rel="stylesheet">
-        <script src="scritps/common.js" type="text/javascript"></script>
-        <script src="scripts/index.js" type="text/javascript"></script>
+        <link href="styles/fonts.css" type="text/css" media="all" rel="stylesheet">
+        <link href="styles/list.css" type="text/css" media="all" rel="stylesheet">
+        <script src="scripts/list.js" type="text/javascript"></script>
     </head>
-    <body>Lista</body>
+    <body id="list">
+        <div id="wrapper">
+            <header id="header">
+                <div id="logo"><img src="images/coupon_logo.png" alt="Centrum kuponów"></div>
+                <div id="top" class="wrap">
+                    <dl class="clearfix">
+                        <dt>Kategorie kuponów:</dt>
+                        <dd></dd>
+                    </dl>
+                    <div id="summary" class="clearfix">
+                        <div class="col colL">
+                            <span data-id="0">Wszystkie</span>
+                            <span data-id="86">Książki, muzyka, film</span>
+                            <span data-id="40">RTV AGD, komputery</span>
+                            <span data-id="68">Bielizna, odzież, obówie</span>
+                            <span data-id="70">Biżuteria i perfumy</span>
+                            <span data-id="107">Kwiaty, czekoladki</span>
+                        </div>
+                        <div class="col colC">
+                            <span data-id="114">Zdrowie i uroda</span>
+                            <span data-id="101">Gadżety i hobby</span>
+                            <span data-id="89">Delikatesy spożywcze</span>
+                            <span data-id="361">Nauka i szkolenia</span>
+                            <span data-id="838">Fotoprezenty</span>
+                            <span data-id="304">Artykuły zoologiczne</span>
+                        </div>
+                        <div class="col colR">
+                            <span data-id="163">Podróże</span>
+                            <span data-id="54">Telefony i usługi telekomunikacyjne</span>
+                            <span data-id="121">Dom i ogród</span>
+                            <span data-id="261">Artykuły biurowe</span>
+                            <span data-id="142713">Zakupy grupowe</span>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <div id="content" class="wrap">
+                <section id="promoted" class="loading">
+                    <header>
+                        <h1>Rabat tygodnia</h1>
+                    </header>
+                    <p class="loadingTxt">Trwa ładowanie</p>
+                    <article class="last clearfix">
+                        <span class="brand"><img src="" alt=""></span>
+                        <header>
+                            <h2></h2>
+                            <h1></h1>
+                            <p></p>
+                        </header>
+                        <footer>
+                            <a href="#">Zobacz pormocję</a>
+                            <dl><dt>Ważny do</dt><dd></dd></dl>
+                        </footer>
+                    </article>
+                </section>
+                <section id="filtered" class="loading single">
+                    <header>
+                        <h1>Kupony rabatowe i promocje</h1>
+                    </header>
+                    <p class="loadingTxt">Trwa ładowanie</p>
+                    <p class="emptyTxt">Brak kuponów w wybranych kategoriach</p>
+                    <article class="clearfix">
+                        <span class="brand"><img src="" alt=""></span>
+                        <header>
+                            <h2></h2>
+                            <h1></h1>
+                            <p></p>
+                        </header>
+                        <footer>
+                            <a href="#">Zobacz pormocję</a>
+                            <dl><dt>Ważny do</dt><dd></dd></dl>
+                        </footer>
+                    </article>
+                    <div class="pagination">
+                        <span class="prev">Poprzednie</span>
+                        <span class="next">Następne</span>
+                        <span class="current">1</span>
+                        <span class="page">2</span>
+                        <span class="sep">...</span>
+                    </div>
+                </section>                
+            </div>
+            <div id="push"></div>
+        </div>
+        <footer id="footer">
+            <div class="wrap clearfix">
+                <p class="col">Copyright &copy; 2012 <a href="http://opera.com/">Opera Software ASA</a>. Wszystkie prawa zastrzeżone.</p>
+                <p class="colR">More than <a href="http://opera.com/">250 milion</a> users worldwide</p>
+            </div>
+        </footer>
+    </body>
 </html>

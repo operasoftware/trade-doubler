@@ -11,6 +11,8 @@ body{
     font-size: 14px;    
     margin: 0;
     padding: 0;
+    width: 100%;
+    height: 100%;
     color: #948670;
     line-height: 22px;
     background-color: #fff;   
@@ -24,10 +26,6 @@ body{
     position: absolute;
     top: -9999px;
     font-size: 0;    
-}
-body#sd{
-    width: 100%;
-    height: 100%;
 }
 #logo{
     display: none;
@@ -85,6 +83,7 @@ body#sd{
     padding: 0;
     height: 66px;
     overflow: hidden;
+    text-overflow: -o-ellipsis-lastline;
 }
 #list section h2{
     font-family: AbrilFatfaceRegular;
@@ -134,39 +133,52 @@ body#sd{
     padding-left: 42px;
     background: transparent url(../images/coupon_ends.png) no-repeat 0 0;
 }
-#sd .logoRight{
+.logoRight{
     padding-right: 42px;
     background: transparent url(../images/coupon_ends.png) no-repeat 100% 100%;
 }
 #list section .logo img{
     display: inline-block;
-    height: 100%;
-    max-width: 100%;
+    max-height: 80px;
+    max-width: 306px;
 }
 @media (min-width: 460px){
-    .loading #list section#current{
+    #list section.empty{
         height: 260px;
         background: transparent url(../images/ck_logo_280.png) no-repeat 50% 50%;
         background-size: 280px 112px;
     }
-    .loading #list section#current header,
-    .loading #list section#current p,
-    .loading #list section#current .logoLeft{
+    #list section.empty header,
+    #list section.empty p,
+    #list section.empty .logoLeft{
         visibility: hidden;
     }
 }
 @media (max-width: 460px) and (min-width: 340px){
+    #list section.empty{
+        height: 180px;
+        background: transparent url(../images/ck_logo_280.png) no-repeat 50% 50%;
+        background-size: 280px 112px;
+    }
+    #list section.empty header,
+    #list section.empty p,
+    #list section.empty .logoLeft{
+        visibility: hidden;
+    }
     #list{
         width: 300px;
         margin: -90px 0 0 -150px;
+    }
+    #list section .logo img{
+        max-width: 222px;
     }
     #list section p{
         display: none;
     }
 }
 @media (max-width: 340px){
-    body#sd #bg{display: none;}
-    body#sd{
+    body #bg{display: none;}
+    body{
         display: block;
         background: #ebe7e0 url(../images/lines_bg.png) repeat 50% 0;
     }
@@ -198,3 +210,12 @@ body#sd{
         background-size: 60px 24px;
     }    
 }
+
+
+
+
+
+
+
+
+
