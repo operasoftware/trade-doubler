@@ -245,7 +245,6 @@ var FilteredList = function(instance,data){
 		
 		this.update = function(){
 				this.data = Categories.getActiveCatsData(data);
-				
 				if(this.data.length==0){
 						instance.classList.add('empty');
 						this.pagination.refresh(1,1);
@@ -256,6 +255,7 @@ var FilteredList = function(instance,data){
 		};
 		
 		this.show = function(from,to){
+				console.log(from,to);
 				instance.classList.add('loading');
 				//remove items
 				while(instance.getElementsByTagName('article').length>0)instance.removeChild(instance.getElementsByTagName('article')[0]);
@@ -264,7 +264,7 @@ var FilteredList = function(instance,data){
 				for(var i=from;i<=to;i++){
 						var section = tpl.cloneNode(true);
 						
-						this.fill(section,data[i])
+						this.fill(section,Data.data[this.data[i]]);
 						
 						if(i==to)section.classList.add('last');
 						instance.insertBefore(section,insert);
@@ -341,18 +341,15 @@ var Pagination = function(instance,onChange){
 		
 		this.total = 0;
 		this.current = 0;		
-		
 		this.refresh = function(current,total){
 				if(current<0)current = 0;
 				else if(current>total)current = total;
 				
-				if(this.current!=current||this.total!=total){
-						this.current = current;
-						this.total = total;		
+				this.current = current;
+				this.total = total;		
 						
-						this.build();
-						onChange();
-				};
+				this.build();
+				onChange();
 		};
 		
 		this.build = function(){
