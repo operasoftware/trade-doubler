@@ -31,7 +31,8 @@ body{
     border-radius: 5px;
     box-shadow: 1px 3px 3px #cac3b9;
     background-color: #fff;
-    padding: 24px 12px;
+    padding: 18px;
+    border: 1px solid #c2c2c2;
 }
 .form{
     margin: 0 auto;
@@ -39,29 +40,34 @@ body{
     width: 440px;
 }
 @media (max-height: 400px){
-    .scroll{
-        height: 140px;
+    .form{
+        height: 330px;
         overflow-y: scroll;
     }
 }
 h1{
-    font-size: 26px;
-    margin: 0 0 24px 0;
+    font-size: 24px;
+    margin: 4px 0 21px 18px;
     padding: 0;
+    letter-spacing: -1px;
+    font-family: OpenSansBold;
 }
 label.cat{
     float: left;
     width: 140px;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 20px;
     font-weight: bold;
 }
 .items{
     float: right;
-    width: 260px;
+    width: 245px;
 }
 .itemRow{
     margin-bottom: 4px;
+}
+.itemRow.last{
+    margin-bottom: 0;
 }
 .itemRow input{
     float: left;

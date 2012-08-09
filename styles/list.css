@@ -56,14 +56,17 @@ a:hover{
     margin: 0 auto;
     width: 960px;
 }
-#footer a{
+#footer strong{
     font-weight: normal;
     font-family: OpenSansBold;
+    text-decoration: underline;
 }
 #footer p{
+    color: #beb29e;
     margin: 0;
     padding: 0;
     line-height: 20px;
+    text-shadow: -1px -1px #f6f3ee;
 }
 #header{
     background: transparent url(../images/header_bg.jpg) repeat-x 50% 100%;
@@ -116,6 +119,7 @@ a:hover{
     font-weight: normal;
     font-family: AbrilFatfaceRegular;
     font-size: 18px;
+    text-shadow: -1px -1px #f6f3ee;
 }
 #top dl dd{
     position: relative;
@@ -132,6 +136,7 @@ a:hover{
     font-weight: normal;
     text-overflow: ellipsis;
     white-space: nowrap;
+    text-shadow: -1px -1px #fff;
     background: transparent url(../images/cat_input.png) no-repeat 0 0;
 }
 #top dl dd::after{
@@ -173,10 +178,11 @@ a:hover{
     line-height: 18px;
     margin: 15px 5px 0 5px;
     cursor: pointer;
-    
+    text-shadow: -1px -1px #f6f3ee;
 }
 #summary span:hover{
-    text-decoration: underline;
+    text-decoration: none;
+    color: #cf1f22;
 }
 #summary span.selected{
     padding-left: 22px;
@@ -184,6 +190,9 @@ a:hover{
     font-weight: normal;
     text-decoration: underline;
     background: transparent url(../images/cat_star.png) no-repeat 0 50%;
+}
+#summary span.selected:hover{
+    text-decoration: none;
 }
 #content{
     min-height: 300px;
@@ -209,8 +218,7 @@ a:hover{
     background: transparent url(../images/pagination_bg.png) no-repeat 0 100%;
 }
 .pagination span:hover{
-    background-position: 0 0;
-    color: #fff;
+    color: #CF1F22;
 }
 .pagination span.current,.pagination span.current:hover{
     background-position: 0 0;
@@ -318,7 +326,7 @@ a:hover{
 #content article header{
     float: left;
     width: 480px;
-    padding-top: 4px;
+    padding-top: 10px;
 }
 #content article h2{
     margin: 0;
@@ -352,6 +360,7 @@ a:hover{
     padding: 0;
     font-size: 13px;
     text-align: center;
+    color: #c3b7a3;
 }
 #content article footer dl dt{
     display: inline;

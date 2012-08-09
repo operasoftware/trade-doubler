@@ -255,7 +255,6 @@ var FilteredList = function(instance,data){
 		};
 		
 		this.show = function(from,to){
-				console.log(from,to);
 				instance.classList.add('loading');
 				//remove items
 				while(instance.getElementsByTagName('article').length>0)instance.removeChild(instance.getElementsByTagName('article')[0]);

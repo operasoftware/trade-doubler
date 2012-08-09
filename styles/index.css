@@ -60,7 +60,6 @@ body{
     left: 50%;
     margin: -130px 0 0 -195px;
     width: 390px;
-    background-color: red;
 }
 #list section{
     position: absolute;
@@ -176,7 +175,63 @@ body{
         display: none;
     }
 }
-@media (max-width: 340px){
+@media (max-width: 340px) and (min-width: 310px){
+    #bg{
+        padding: 1.8% 0 0 1.8%;
+        width: 97%;
+    }
+    #list section.empty{
+        height: 126px;
+        background: transparent url(../images/ck_logo_280.png) no-repeat 50% 50%;
+        background-size: 280px 112px;
+    }
+    #list section.empty .logoLeft{
+        visibility: hidden;
+    }    
+    #list section header,
+    #list section p{
+        display: none;
+    }
+    #list{
+        width: 300px;
+        margin: -63px 0 0 -150px;
+    }
+    #list section .logo img{
+        max-width: 222px;
+    }
+}
+@media (max-width: 309px) and (min-width: 250px){
+    #bg{
+        padding: 1.8% 0 0 1.8%;
+        width: 97%;
+    }
+    #list section.empty{
+        height: 126px;
+        background: transparent url(../images/ck_logo_200.png) no-repeat 50% 50%;
+        background-size: 200px 80px;
+    }
+    #list section.empty .logoLeft{
+        visibility: hidden;
+    }    
+    #list section header,
+    #list section p{
+        display: none;
+    }
+    #list{
+        width: 220px;
+        margin: -63px 0 0 -110px;
+    }
+    #list section .logo img{
+        max-width: 136px;
+    } 
+}
+@media (max-width: 249px) and (min-width: 220px){
+    #logo{
+        background-image: url(../images/ck_logo_200.png);
+        background-size: 200px 80px;
+    } 
+}
+@media (max-width: 249px){
     body #bg{display: none;}
     body{
         display: block;
@@ -185,18 +240,6 @@ body{
     #logo{
         display: block;
     }
-}
-@media (max-width: 340px) and (min-width: 310px){
-    #logo{
-        background-image: url(../images/ck_logo_280.png);
-        background-size: 280px 112px;
-    }    
-}
-@media (max-width: 309px) and (min-width: 220px){
-    #logo{
-        background-image: url(../images/ck_logo_200.png);
-        background-size: 200px 80px;
-    }    
 }
 @media (max-width: 219px) and (min-width: 130px){
     #logo{
