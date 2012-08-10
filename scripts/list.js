@@ -8,7 +8,7 @@ var Categories = function(instance){
 		for(var l = 0;l<linksLength;l++){
 				if(links[l].getAttribute('data-id')==0){
 						all = links[l];
-						all.addEventListener('click',function(e){
+						all.addEventListener('mousedown',function(e){
 								
 								e.preventDefault();
 								
@@ -23,7 +23,7 @@ var Categories = function(instance){
 						},false);
 				} else {
 						swap.push(links[l]);
-						links[l].addEventListener('click',function(e){
+						links[l].addEventListener('mousedown',function(e){
 								
 								var select = !this.classList.contains('selected');
 								
@@ -401,19 +401,35 @@ var Pagination = function(instance,onChange){
 				
 		};
 		
+		var tween = new Tweenable();
+		
 		instance.addEventListener('click',function(e){
 				var link = e.target;
 				
-				if(link.tagName.toLowerCase()!='span'&&!link.classList.contains('current')&&!link.classList.contains('sep'))return;
-				
-				if(e.target.classList.contains('page'))self.refresh(parseInt(e.target.textContent),self.total);	
-				else if(e.target.classList.contains('next'))self.refresh(self.current+1,self.total);
-				else if(e.target.classList.contains('prev'))self.refresh(self.current-1,self.total);
-				
-				document.documentElement.scrollTop = 0;
-				
+				if(link.tagName.toLowerCase()!='span'||link.classList.contains('current')||link.classList.contains('sep'))return;
+						
 				e.preventDefault();
+				
+				var element = e.target;
+						
+				tween.tween({
+						from:     { top: document.documentElement.scrollTop },
+						to:       { top: 0 },
+						duration: 800,
+						fps: 24,
+						easing: 'swingTo', 
+						step: function () {
+								document.documentElement.scrollTop = this.top;
+						},
+						callback: function(){
+								if(element.classList.contains('page'))self.refresh(parseInt(element.textContent),self.total);	
+								else if(element.classList.contains('next'))self.refresh(self.current+1,self.total);
+								else if(element.classList.contains('prev'))self.refresh(self.current-1,self.total);
+						}
+				});				
+				
 		},false);
+		
 		
 };
 

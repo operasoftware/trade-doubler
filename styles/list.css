@@ -2,6 +2,7 @@ html{
     height: 100%;
     margin: 0;
     padding: 0;
+    min-height: 100%;
 }
 body{
     font-family: OpenSansRegular, Arial, sans-serif;
@@ -70,7 +71,7 @@ a:hover{
 }
 #header{
     background: transparent url(../images/header_bg.jpg) repeat-x 50% 100%;
-    padding: 50px 0;
+    padding: 40px 0 50px 0;
     width: 100%;
     overflow: hidden;
 }
@@ -106,7 +107,7 @@ a:hover{
     text-indent: -9999px;
 }
 #top{
-    width: 730px;
+    width: 800px;
 }
 #top dl{
     margin: 0 auto;
@@ -160,17 +161,18 @@ a:hover{
     background-position: 0 -86px;
 }
 #summary{
+    padding: 30px 0 0 35px;
     display: none;
-    padding-top: 30px;
 }
 #top.open #summary{
     display: block;
 }
 #summary .col{
     float: left;
-    width: 220px;
+    width: 230px;
 }
 #summary .colR{
+    float: left;
     width: 290px;
 }
 #summary span{
@@ -230,6 +232,7 @@ a:hover{
     color: #948670;
     margin: 0;
     width: 30px;
+    cursor: default;
 }
 .pagination span.prev{
     position: relative;
