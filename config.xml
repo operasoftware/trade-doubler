@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget xmlns="http://www.w3.org/ns/widgets" id="http://centrumkuponow.com/operaspeeddial" version="0.9" viewmodes="minimized">
    <name short="Centrum Kuponów" xml:lang="pl">Centrum Kuponów</name>
-   <description xml:lang="pl"></description>
+   <description xml:lang="pl">Centrum Kuponów to rozszerzenie prezentujące kupony rabatowe i promocje sklepów i dużych sieci handlowych. Umożliwia wyświetlanie promocji bezpośrednio w okienku Speed Dial. Dodatkowym udogodnieniem jest możliwość sortowania kuponów według poszczególnych kategorii.</description>
    <author href="http://opera.com" email="support@opera.com">Opera Software ASA</author>
    <license>Copyright (c) 2012. All rights reserved.</license>
    <icon src="images/ico.png" width="64" height="64"/>
